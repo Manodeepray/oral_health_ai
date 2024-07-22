@@ -269,5 +269,34 @@ Treatment_History_and_Response_ques = "\n13.Have you received any treatments for
 
 
 
+
+
+
+#questions 2===
+_duration="Duration: how long ago did it start ?"
+_gotten_worse="has it gotten worse ovetime?"
+_bleeding="is there bleeding ?"
+_swelling="is there swelling ?"
+_persistent_sore="is the sore persistent ?"
+_smoke_="do you smoke. if yes how much ?"
+_alcohol_= "do you consume alchohol. if yes how much ?"
+_brush_floss_="how often do you brush your teeth?"
+_dentist="how often do u go to the denitist?"
+_oral_infection_="any history of oral infection previously?"
+_lesion_size_="what is the size of the lesion ?"
+_change_in_lesion_size_="has the size changed over time ?"
+_lesion_colour_="what is the colour of the lesion?"
+_change_in_lesion_colour="has the colour changed over time ?"
+_lesion_location="where is the lesion located ?"
+_lymph_node_="can you feel any lymph nodes i.e. swollen area in neck ?"
+_overall_health= "comment on your overall health :"
+_family_history_of_cancer=" any family hisstory of cancer ?"
+_serious_illness_before= "any history of chronic illness?"
+_treatment_on_cancer="are you on any treatments or any programs?"
+
+
+
+
+
 if __name__=="__main__":
     prompt = prompt_return() 

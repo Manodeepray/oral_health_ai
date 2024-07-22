@@ -1,0 +1,13 @@
+gradio
+tensorflow
+opencv-python==4.10.0.82  
+numpy==1.24.4
+matplotlib
+pandas
+ultralytics
+langchain_community
+pypdf
+langchain_chroma langchain_openai
+transformers sentence-tranformers langchain torch faiss-cpu numpy Library configurati
+sentence_transformers
+faiss-cpu

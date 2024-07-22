@@ -154,4 +154,5 @@ def image_prediction(image):
         os.remove(exit_image_path)
         pred_grade = 'none'
         pred_stage = 'none'
-        return exit_image , class_prediction , pred_grade , pred_stage 
+        pred_region = 'none'
+        return exit_image , class_prediction , pred_grade , pred_stage ,pred_region
