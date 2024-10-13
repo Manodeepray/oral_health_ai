@@ -1,5 +1,4 @@
-Here’s a **beautiful** `README.md` for your **Oral Cancer Prediction Web App using RAG and YOLO** project:
-
+---
 ---
 
 # 🦷 OralCare.ai : Oral Cancer Diagnosis Web App using RAG and YOLOv8
@@ -45,51 +44,90 @@ Before setting up the project, ensure that the following are installed:
 
 1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/Manodeepray/oral_health_ai.git
-    cd oral_health_ai
-    ```
+   ```bash
+   git clone https://github.com/Manodeepray/oral_health_ai.git
+   cd oral_health_ai
+   ```
 
 2. **Install dependencies**:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. **Set up the Mistral 7B model**:
+3. **Set up the Mistral 7B model or any other of ur choice**:
 
-    - Follow the instructions [here](https://huggingface.co/mistral7b) to download the model.
-    - Update the model path in the `config.py` file.
+   - Follow the instructions [here](https://huggingface.co/mistral7b) to get the model inference end-point.
+   - Get your own Huggingface API token by following the instructions [here](https://huggingface.co/docs/hub/en/security-tokens)
+   - Update the `HUGGINGFACEHUB_API_TOKEN` variable in `tools/keys.py` with your token as well as on line 219 and 229.
+
+   ```python
+    def RAG_cancer_output(grade_query , stage_query):
+        login(token="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") #replace with ur own token
+        HUGGINGFACEHUB_API_TOKEN = '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'
+
+   ```
+
+   - Update the model-id in the `tools/RAG.py` file on line 99.
+
+   ```python
+    llms = ["meta-llama/Meta-Llama-3-8B","mistralai/Mistral-7B-v0.1","google/gemma-7b"]
+
+   ```
 
 4. **Download the oral lesion image dataset** (if available) or use your own images.
 
 5. **Run the app**:
 
-    ```bash
-    python app.py
-    ```
+   ```bash
+   python app.py
+   ```
 
 6. **Open the Web App**:
 
-    The app will run locally. Visit [http://localhost:7860](http://localhost:7860) to access the web interface.
+   The app will run locally. Visit [http://localhost:7860](http://localhost:7860) to access the web interface.
 
 ## 🛠️ File Structure
 
 ```
 📂 oral-cancer-webapp/
 │
-├── 📁 data/                        # Contains medical PDFs for RAG model and sample images for YOLO
-├── 📁 models/                      # Trained YOLOv8n models for image classification
-├── 📁 logs/                        # Logs and metadata for debugging and evaluation
-├── 📁 scripts/                     # Python scripts for training, evaluation, and processing
+│
+├──📁src/
+    ├── 📁 pdfs/                        # Contains medical PDFs for RAG model
+    ├── 📁 models/                      # Trained YOLOv8n models for image classification
+    ├── 📁 test_imfs_for_pred/          # Contains testing images for app
+|
+|
+|
+├──📁utils/
+    ├── 📁 predict1/                     # Contains initial prediction of image for oral diseases
+    ├── 📁 predict2/                     # Contains class prediction of image for oral cancer or none
+    ├── 📁 predict3/                     # Contains region prediction of image for oral cancer
+    ├── 📁 predict4/                     # Contains grade prediction of image for oral cancer
+    └── 📁 predict5/                     # Contains stage prediction of image for oral cancer
+|
+|
+|
+├──📁tools/
+    ├── image_pred.py
+    ├── keys.py
+    ├── questions.py
+    ├── RAG.py
+    ├── test_cleaner.py
+    └── tools.py
+|
+|
+|
+├──📁runs/
+    └──📁classify/
+       └──📁utils/      #contains temp YOLO outputs
+|
 │
 ├── app.py                          # Main web application script using Gradio
-├── config.py                       # Configuration file for RAG model and YOLO settings
-├── train_yolo.py                   # Script for training YOLO on oral images
 ├── chatbot.py                    # RAG model for symptom-based query handling
 ├── README.md                       # Documentation file
-├── requirements.txt                # Python dependencies
-└── LICENSE                         # License information
+└── requirements.txt                # Python dependencies
 ```
 
 ## 📊 Methodology
@@ -136,28 +174,27 @@ The following metrics were used to evaluate the models:
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the CC License.
 
 ## 🙌 Acknowledgments
 
-This project was completed during a summer internship at **IIT Bhilai**, with guidance from **Dr. Sucheta Parui**. The **Mistral 7B** LLM and **YOLOv8n** were crucial components in achieving high-performance metrics for cancer diagnosis.
+This project was completed during a summer internship at **IIT Bhilai**, with guidance from **Dr. Archana Tiwari**. The **Mistral 7B** LLM and **YOLOv8n** were crucial components in achieving high-performance metrics for cancer diagnosis.
 
 ## 📨 Contact
 
 For any questions or further collaboration, please reach out:  
 **Manodeep Ray**  
-Email: [2230028@kiit.ac.in](mailto:2230028@kiit.ac.in)
+Email: [manodeepray1@gmail.com](mailto:manodeepray1@gmail.com)
 
 ---
 
-*We hope this app will contribute to advancing early diagnosis of oral cancer with AI.*
+_We hope this app will contribute to advancing early diagnosis of oral cancer with AI._
 
 ---
 
-This `README.md` is now focused on the **project** aspect of your oral cancer diagnosis app. It gives an overview of the key technologies, provides a guide for running the app, and includes details about the methodology and future improvements.
-
 ---
-title: Oralare.ai
+
+title: OralCare.ai
 emoji: 🏃
 colorFrom: red
 colorTo: blue
@@ -166,6 +203,7 @@ sdk_version: 4.37.2
 app_file: app.py
 pinned: false
 license: cc
+
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
