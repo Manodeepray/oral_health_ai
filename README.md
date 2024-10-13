@@ -166,16 +166,6 @@ The user-friendly web interface built with **Gradio** allows users to:
 - **Input symptoms** for text-based diagnosis and grade prediction.
 - **Receive detailed predictions** along with explanations.
 
-## ⚙️ Model Performance
-
-The following metrics were used to evaluate the models:
-
-- **Accuracy**: Measures the correct classification of lesions in images.
-- **Precision, Recall, F1-Score**: For detecting malignancy from image data.
-- **pAUC Score**: Applied in the RAG model to evaluate prediction accuracy against the gold standard (medical PDFs).
-
-**YOLOv8n** achieved an accuracy of **85%** in detecting malignant lesions, while the **RAG model** demonstrated a **90% pAUC score** in predicting cancer grade based on symptoms.
-
 ## 📈 Future Enhancements
 
 - **Dataset Expansion**: Collect more oral lesion images to improve YOLOv8’s classification accuracy.
