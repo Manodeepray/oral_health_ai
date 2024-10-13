@@ -166,6 +166,18 @@ The user-friendly web interface built with **Gradio** allows users to:
 - **Input symptoms** for text-based diagnosis and grade prediction.
 - **Receive detailed predictions** along with explanations.
 
+# Example of the interface
+
+1st part
+https://github.com/user-attachments/assets/8c6e58c8-c50b-4410-946e-e413d64f12fe
+2nd part
+
+
+https://github.com/user-attachments/assets/dfa8a555-99d7-4181-9995-738b0d6868bc
+
+
+
+
 ## 📈 Future Enhancements
 
 - **Dataset Expansion**: Collect more oral lesion images to improve YOLOv8’s classification accuracy.
