@@ -125,7 +125,9 @@ Before setting up the project, ensure that the following are installed:
 |
 │
 ├── app.py                          # Main web application script using Gradio
-├── chatbot.py                    # RAG model for symptom-based query handling
+├── chatbot.py                    # RAG model app for symptom-based query handling
+├── image_app.py                    # image ai app for classification and detection of cancer / diseases
+├── combined.py                    # test webapp for combining the apps
 ├── README.md                       # Documentation file
 └── requirements.txt                # Python dependencies
 ```
