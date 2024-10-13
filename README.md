@@ -170,6 +170,8 @@ The user-friendly web interface built with **Gradio** allows users to:
 
 1st part
 https://github.com/user-attachments/assets/8c6e58c8-c50b-4410-946e-e413d64f12fe
+
+
 2nd part
 
 
