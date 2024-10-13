@@ -136,11 +136,19 @@ Before setting up the project, ensure that the following are installed:
 
 ### Image Classification using YOLOv8
 
-The **YOLOv8n** model is trained on a custom dataset of oral lesion images. The model is able to:
+The YOLOv8n model was trained on a custom dataset of oral lesion images. These images were scraped from Google using web scraping techniques and then uploaded to Kaggle for preprocessing and YOLO model training.
 
-- Detect oral lesions in uploaded images.
-- Classify lesions as potentially malignant or benign.
-- Provide visual feedback by drawing bounding boxes around detected lesions.
+Initially, the model classifies the uploaded images into one of the following categories:
+
+- Oral Cancer
+- Healthy
+- Periodontal Disease
+- Scurvy
+- Dental Caries
+
+If the model detects Oral Cancer, it proceeds with further evaluation and detailed classification of the lesion to determine the malignancy level.
+
+Training on Kaggle allowed the model to be fine-tuned on a large dataset, ensuring accuracy and performance in real-world scenarios. The dataset was expanded to cover a variety of oral conditions to generalize well across different cases.
 
 ### Symptom-Based Cancer Prediction using RAG
 
